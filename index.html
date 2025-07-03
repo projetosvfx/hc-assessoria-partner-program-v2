@@ -16,11 +16,20 @@
       --color-text-medium: #b0b0b0;
     }
 
+    /* Add Bricolage Grotesque font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
     body {
       font-family: 'Bricolage Grotesque', sans-serif;
       background-color: var(--color-primary-dark);
       color: var(--color-text-light);
       overflow-x: hidden; /* Prevent horizontal scrollbars from rogue elements */
+    }
+
+    /* Apply Bricolage Grotesque specifically to titles and headings */
+    h1, h2, h3, h4, h5, h6, .title-font {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700;
     }
 
     @keyframes cosmicShift {
@@ -124,9 +133,6 @@
       background: var(--color-accent-gold-light);
       /* box-shadow: 0 0 5px var(--color-accent-gold-light); Removed glow */
     }
-
-    /* Add Bricolage Grotesque font from Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
     .section-title-underline {
       position: relative;
