@@ -819,7 +819,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="faq" className="py-20 md:py-32" style={{backgroundColor: '#E8E8E8'}}>
+        <section id="faq" className="py-20 md:py-32 relative" style={{backgroundColor: '#E8E8E8'}}>
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title-underline section-title">
@@ -840,6 +840,17 @@ export default function App() {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+          
+          {/* Floating icon in bottom left corner */}
+          <div className="absolute bottom-8 left-8 z-20">
+            <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+              <img 
+                src="/imagem-forms.jpg" 
+                alt="Ícone de Suporte" 
+                className="w-10 h-10 rounded-full object-cover"
+              />
             </div>
           </div>
         </section>
