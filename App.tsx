@@ -26,6 +26,7 @@ import { CheckCircle2Icon } from "./components/icons/CheckCircle2Icon";
 import { AlertCircleIcon } from "./components/icons/AlertCircleIcon";
 import { Loader2Icon } from "./components/icons/Loader2Icon";
 import { ChevronUpIcon } from "./components/icons/ChevronUpIcon"; // For scroll to top
+import { CalculatorIcon } from "./components/icons/CalculatorIcon"; // New calculator icon
 
 // Função para scroll suave
 function scrollToSection(id: string) {
@@ -245,8 +246,9 @@ function EarningsSimulator() {
     <div className="glassmorphic p-8 md:p-12">
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h3 className="text-3xl md:text-4xl font-bold mb-4 section-title-underline section-title">
-          <span className="text-[var(--color-accent-gold)]">
-            💰 Calculadora de Ganhos
+          <span className="text-[var(--color-accent-gold)] flex items-center justify-center gap-3">
+            <CalculatorIcon className="h-8 w-8 md:h-10 md:w-10" />
+            Calculadora de Ganhos
           </span>
         </h3>
         <p className="text-lg text-[var(--color-text-medium)]">
