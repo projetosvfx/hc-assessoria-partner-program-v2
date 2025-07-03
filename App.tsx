@@ -797,10 +797,10 @@ export default function App() {
         <BenefitsSection />
 
         <section id="calculadora" className="py-20 md:py-32 relative overflow-hidden">
-          {/* Background image with overlay */}
-          <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-60" 
+          {/* Background image with reduced overlay opacity for better visibility */}
+          <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80" 
                style={{backgroundImage: "url('/imagem-bg-01.jpg')"}}></div>
-          <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+          <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.6)'}}></div>
           
           <div className="container mx-auto px-4 relative z-10">
             <EarningsSimulator />
