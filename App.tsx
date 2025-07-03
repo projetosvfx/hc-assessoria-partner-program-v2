@@ -861,14 +861,14 @@ export default function App() {
                 <ContactForm />
               </div>
               
-              {/* Image Column */}
+              {/* Image Column - removed border */}
               <div className="hidden lg:block">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-[var(--color-accent-gold)]/20 to-[var(--color-accent-gold-light)]/20 rounded-3xl blur-xl"></div>
                   <img 
                     src="/imagem-forms.jpg" 
                     alt="Parceria de Sucesso" 
-                    className="relative w-full h-auto rounded-2xl shadow-2xl border border-[var(--color-accent-gold)]/30"
+                    className="relative w-full h-auto rounded-2xl shadow-2xl"
                   />
                 </div>
               </div>
