@@ -36,6 +36,44 @@ function scrollToSection(id: string) {
   }
 }
 
+// Hero Background Carousel Component
+function HeroBackgroundCarousel() {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  // Array of background images - you can add more images here
+  const backgroundImages = [
+    "https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp",
+    // Add your new images here when you upload them
+    // "path/to/your/second-image.jpg",
+    // "path/to/your/third-image.jpg",
+  ];
+
+  useEffect(() => {
+    if (backgroundImages.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+      }, 8000); // Change image every 8 seconds
+      
+      return () => clearInterval(interval);
+    }
+  }, [backgroundImages.length]);
+
+  return (
+    <>
+      {backgroundImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentImage ? 'opacity-80' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url('${image}')` }}
+        />
+      ))}
+      <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+    </>
+  );
+}
+
 // Componente TestimonialCarousel (adaptado)
 function TestimonialCarousel() {
   const [current, setCurrent] = useState(0);
@@ -633,8 +671,7 @@ export default function App() {
 
       <main>
         <section id="hero" className="relative min-h-screen flex items-center justify-center pt-32 pb-12 overflow-hidden">
-           <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80" style={{backgroundImage: "url('https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp')"}}></div>
-           <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+          <HeroBackgroundCarousel />
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
