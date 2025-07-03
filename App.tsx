@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState, useCallback, FormEvent } from "react";
 import { cn } from "./utils/cn";
 import { testimonials, faqData, benefitsData } from "./constants";
@@ -633,8 +631,8 @@ export default function App() {
 
       <main>
         <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
-           <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-20" style={{backgroundImage: "url('https://images.unsplash.com/photo-1530727009405-0slab7300a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=50')"}}></div>
-           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-primary-dark)]/50 via-[var(--color-primary-dark)] to-[var(--color-primary-dark)]"></div>
+           <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80" style={{backgroundImage: "url('https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp')"}}></div>
+           <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
