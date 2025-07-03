@@ -630,13 +630,13 @@ export default function App() {
       </header>
 
       <main>
-        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-32 pb-12 overflow-hidden">
            <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80" style={{backgroundImage: "url('https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp')"}}></div>
            <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
-              <div className="inline-block px-5 py-2 mb-8 text-sm font-semibold tracking-wider text-[var(--color-primary-dark)] bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg">
+              <div className="inline-block px-5 py-2 mb-10 text-sm font-semibold tracking-wider text-[var(--color-primary-dark)] bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg">
                 OPORTUNIDADE EXCLUSIVA DE PARCERIA
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
