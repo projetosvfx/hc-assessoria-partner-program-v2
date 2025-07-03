@@ -87,7 +87,7 @@ function HeroBackgroundCarousel() {
     return (
       <>
         <div
-          className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80"
+          className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-60"
           style={{ backgroundImage: `url('${backgroundImages[0]}')` }}
         />
         <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
@@ -101,7 +101,7 @@ function HeroBackgroundCarousel() {
         <div
           key={index}
           className={`absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center transition-opacity duration-2000 ease-in-out ${
-            index === currentImage ? 'opacity-80' : 'opacity-0'
+            index === currentImage ? 'opacity-60' : 'opacity-0'
           }`}
           style={{ backgroundImage: `url('${image}')` }}
         />
