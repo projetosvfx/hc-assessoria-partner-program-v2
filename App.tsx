@@ -15,6 +15,7 @@ import { UserIcon } from './components/icons/UserIcon';
 import { UsersIcon } from './components/icons/UsersIcon';
 import { BuildingIcon } from './components/icons/BuildingIcon';
 import { CalculatorIcon } from './components/icons/CalculatorIcon';
+import { MailIcon } from './components/icons/MailIcon';
 
 // Thank You Page Component
 const ThankYouPage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
@@ -85,7 +86,10 @@ const ThankYouPage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
         <div className="glassmorphic-light p-6 mb-8">
           <h3 className="font-bold text-[var(--color-accent-gold)] mb-4">Dúvidas? Entre em contato:</h3>
           <div className="space-y-2 text-[var(--color-text-medium)]">
-            <p>📧 <span className="text-white">parceiros@hcassessoria.com.br</span></p>
+            <p className="flex items-center justify-center gap-2">
+              <MailIcon className="w-4 h-4 text-[var(--color-accent-gold)]" />
+              <span className="text-white">parceiros@hcassessoria.com.br</span>
+            </p>
             <p>📱 <span className="text-white">(11) 99999-9999</span></p>
           </div>
         </div>
@@ -627,7 +631,10 @@ const App: React.FC = () => {
             <div>
               <h4 className="font-bold text-white mb-4">Contato</h4>
               <div className="space-y-2 text-[var(--color-text-medium)]">
-                <p>📧 contato@hcassessoria.com.br</p>
+                <p className="flex items-center justify-center gap-2">
+                  <MailIcon className="w-4 h-4 text-[var(--color-accent-gold)]" />
+                  contato@hcassessoria.com.br
+                </p>
                 <p>📱 (11) 99999-9999</p>
                 <p>🏢 São Paulo, SP</p>
               </div>
