@@ -819,22 +819,22 @@ export default function App() {
           </div>
         </section>
 
-        <section id="faq" className="py-20 md:py-32 bg-[var(--color-primary-dark)]/50">
+        <section id="faq" className="py-20 md:py-32" style={{backgroundColor: '#E8E8E8'}}>
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title-underline section-title">
                 Perguntas <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Frequentes</span>
               </h2>
-              <p className="text-lg text-[var(--color-text-medium)] mt-6">Esclareça suas dúvidas e dê o próximo passo rumo a ganhos incríveis.</p>
+              <p className="text-lg text-gray-600 mt-6">Esclareça suas dúvidas e dê o próximo passo rumo a ganhos incríveis.</p>
             </div>
-            <div className="max-w-3xl mx-auto glassmorphic p-2 md:p-4">
+            <div className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-2 md:p-4">
               <Accordion type="single" collapsible className="w-full" defaultValue="faq-0">
                 {faqData.map((item, index) => (
-                  <AccordionItem key={index} value={`faq-${index}`} className="border-[var(--color-accent-gold)]/20 last:border-b-0">
-                    <AccordionTrigger className="text-lg text-left hover:text-[var(--color-accent-gold)] text-white p-6 font-medium">
+                  <AccordionItem key={index} value={`faq-${index}`} className="border-gray-200 last:border-b-0">
+                    <AccordionTrigger className="text-lg text-left hover:text-[var(--color-accent-gold)] text-gray-800 p-6 font-medium">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[var(--color-text-medium)] px-6 pb-6 text-sm leading-relaxed bg-[var(--color-primary-medium-blue)]/20 rounded-b-md">
+                    <AccordionContent className="text-gray-600 px-6 pb-6 text-sm leading-relaxed bg-gray-50/50 rounded-b-md">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
