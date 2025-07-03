@@ -847,21 +847,22 @@ export default function App() {
         <section id="formulario" className="relative py-20 md:py-32 overflow-hidden">
          <div className="absolute inset-0 -z-10" style={{background: 'radial-gradient(circle at 50% 100%, rgba(19, 36, 77, 0.7) 0%, var(--color-primary-dark) 60%)'}}></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
-                Pronto Para <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Lucrar Alto?</span>
-              </h2>
-              <p className="text-lg text-[var(--color-text-medium)] mt-6">Preencha o formulário e nossa equipe entrará em contato em até 24h para iniciar esta parceria de sucesso.</p>
-            </div>
             
             {/* Two column layout: Form on left, Image on right */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Form Column */}
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Form Column with title moved here */}
               <div className="glassmorphic p-8 md:p-12">
+                {/* Title and description moved inside form column */}
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
+                    Pronto Para <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Lucrar Alto?</span>
+                  </h2>
+                  <p className="text-lg text-[var(--color-text-medium)] mt-6">Preencha o formulário e nossa equipe entrará em contato em até 24h para iniciar esta parceria de sucesso.</p>
+                </div>
                 <ContactForm />
               </div>
               
-              {/* Image Column - removed border */}
+              {/* Image Column */}
               <div className="hidden lg:block">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-[var(--color-accent-gold)]/20 to-[var(--color-accent-gold-light)]/20 rounded-3xl blur-xl"></div>
