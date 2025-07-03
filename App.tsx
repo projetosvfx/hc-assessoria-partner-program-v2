@@ -244,7 +244,7 @@ function EarningsSimulator() {
   return (
     <div className="glassmorphic p-8 md:p-12">
       <div className="text-center max-w-3xl mx-auto mb-10">
-        <h3 className="text-3xl md:text-4xl font-bold mb-4 section-title-underline">
+        <h3 className="text-3xl md:text-4xl font-bold mb-4 section-title-underline section-title">
           <span className="text-[var(--color-accent-gold)]">
             💰 Calculadora de Ganhos
           </span>
@@ -509,7 +509,7 @@ function BenefitsSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-wider section-title-underline">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-wider section-title-underline section-title">
             Benefícios Exclusivos
           </h2>
            <p className="text-lg text-[var(--color-text-medium)] mt-6">Vantagens que impulsionam seu sucesso e o de seus clientes.</p>
@@ -639,7 +639,7 @@ export default function App() {
               <div className="inline-block px-5 py-2 mb-10 text-sm font-semibold tracking-wider text-[var(--color-primary-dark)] bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg">
                 OPORTUNIDADE EXCLUSIVA DE PARCERIA
               </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white hero-title">
                 <span className="block leading-tight">Transforme Suas</span>
                 <span className="block bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent leading-tight mt-2" style={{WebkitTextStroke: '1px transparent'}}>
                   Indicações em DINHEIRO
@@ -672,7 +672,7 @@ export default function App() {
           <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-[var(--color-primary-medium-blue)]/10 rounded-full blur-3xl -z-10"></div>
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
                 <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Como Funciona</span> a Parceria?
               </h2>
               <p className="text-lg text-[var(--color-text-medium)] mt-6">Simples, transparente e lucrativo. Nós cuidamos de tudo!</p>
@@ -689,7 +689,7 @@ export default function App() {
                       {step.icon}
                     </div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-3 text-white">{step.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-3 text-white section-title">{step.title}</h3>
                   <p className="text-[var(--color-text-medium)] text-sm leading-relaxed">{step.description}</p>
                 </div>
               ))}
@@ -714,7 +714,7 @@ export default function App() {
         <section id="depoimentos" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
                 O Que Nossos <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Parceiros Dizem</span>
               </h2>
               <p className="text-lg text-[var(--color-text-medium)] mt-6">Histórias reais de sucesso e prosperidade através da nossa parceria.</p>
@@ -726,7 +726,7 @@ export default function App() {
         <section id="faq" className="py-20 md:py-32 bg-[var(--color-primary-dark)]/50">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
                 Perguntas <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Frequentes</span>
               </h2>
               <p className="text-lg text-[var(--color-text-medium)] mt-6">Esclareça suas dúvidas e dê o próximo passo rumo a ganhos incríveis.</p>
@@ -752,7 +752,7 @@ export default function App() {
          <div className="absolute inset-0 -z-10" style={{background: 'radial-gradient(circle at 50% 100%, rgba(28, 42, 78, 0.7) 0%, var(--color-primary-dark) 60%)'}}></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
                 Pronto Para <span className="bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent">Lucrar Alto?</span>
               </h2>
               <p className="text-lg text-[var(--color-text-medium)] mt-6">Preencha o formulário e nossa equipe entrará em contato em até 24h para iniciar esta parceria de sucesso.</p>
