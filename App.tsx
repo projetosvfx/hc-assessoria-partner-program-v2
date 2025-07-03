@@ -420,7 +420,7 @@ function EarningsSimulator() {
 }
 
 // Componente ContactForm
-function ContactForm() {
+function ContactForm({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
   const [formData, setFormData] = useState({
     nome: "", email: "", whatsapp: "", empresa: "", cnpj: "",
     contato: "", cargo: "", telefone: "", observacoes: "",
@@ -484,6 +484,11 @@ function ContactForm() {
       setSubmitStatus("success");
       setSubmitMessage("Formulário enviado! Entraremos em contato em breve.");
       setFormData({ nome: "", email: "", whatsapp: "", empresa: "", cnpj: "", contato: "", cargo: "", telefone: "", observacoes: "" });
+      
+      // Redirect to thank you page after successful submission
+      setTimeout(() => {
+        onSubmitSuccess();
+      }, 1000);
     } catch (error) {
       setSubmitStatus("error");
       setSubmitMessage("Erro ao enviar. Tente novamente.");
@@ -629,12 +634,139 @@ function BenefitsSection() {
   );
 }
 
+// Thank You Page Component
+function ThankYouPage({ onBackToHome }: { onBackToHome: () => void }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-60" 
+           style={{backgroundImage: "url('https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp')"}}></div>
+      <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+
+      <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="max-w-4xl mx-auto">
+          {/* Success Icon */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-2xl">
+              <CheckCircle2Icon className="h-12 w-12 text-white" />
+            </div>
+          </div>
+
+          {/* Main Title */}
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white hero-title">
+            <span className="block leading-tight">Parabéns!</span>
+            <span className="block bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] bg-clip-text text-transparent leading-tight mt-2">
+              Sua Jornada de Sucesso Começou
+            </span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-[var(--color-text-medium)] mb-12 max-w-3xl mx-auto">
+            Recebemos suas informações com sucesso! Nossa equipe especializada entrará em contato em até <span className="text-[var(--color-accent-gold)] font-semibold">24 horas</span> para iniciar esta parceria lucrativa.
+          </p>
+
+          {/* What happens next section */}
+          <div className="glassmorphic p-8 md:p-12 mb-12 text-left max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center section-title">
+              O Que Acontece Agora?
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--color-primary-dark)] font-bold text-xl">
+                  1
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Análise Inicial</h3>
+                <p className="text-[var(--color-text-medium)] text-sm">
+                  Analisamos sua indicação e validamos o potencial de recuperação tributária
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--color-primary-dark)] font-bold text-xl">
+                  2
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Contato Direto</h3>
+                <p className="text-[var(--color-text-medium)] text-sm">
+                  Nossa equipe entra em contato para alinhar detalhes e próximos passos
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--color-primary-dark)] font-bold text-xl">
+                  3
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Início dos Ganhos</h3>
+                <p className="text-[var(--color-text-medium)] text-sm">
+                  Você começa a receber suas comissões conforme os valores são recuperados
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="glassmorphic-light p-6 md:p-8 mb-12 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-white mb-4 text-center">
+              Precisa de Algo Urgente?
+            </h3>
+            <p className="text-[var(--color-text-medium)] text-center mb-4">
+              Nossa equipe está sempre disponível para esclarecer dúvidas
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a 
+                href="mailto:contato@hcassessoria.com.br" 
+                className="text-[var(--color-accent-gold)] hover:text-[var(--color-accent-gold-light)] transition-colors"
+              >
+                contato@hcassessoria.com.br
+              </a>
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-[var(--color-accent-gold)]"></div>
+              <a 
+                href="tel:+5511999999999" 
+                className="text-[var(--color-accent-gold)] hover:text-[var(--color-accent-gold-light)] transition-colors"
+              >
+                (11) 99999-9999
+              </a>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <Button 
+              onClick={onBackToHome}
+              className="w-full sm:w-auto bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] hover:opacity-90 text-[var(--color-primary-dark)] font-bold border-0 rounded-xl py-4 px-10 text-lg shadow-xl transition-all hover:scale-105"
+            >
+              Voltar ao Início
+            </Button>
+            
+            <Button 
+              onClick={() => window.open('https://wa.me/5511999999999?text=Olá! Acabei de me cadastrar como parceiro da HC Assessoria e gostaria de mais informações.', '_blank')}
+              variant="outline"
+              className="w-full sm:w-auto text-[var(--color-accent-gold)] border-[var(--color-accent-gold)]/70 hover:bg-[var(--color-accent-gold)]/10 hover:border-[var(--color-accent-gold)] rounded-xl py-4 px-10 text-lg transition-all hover:scale-105"
+            >
+              Falar no WhatsApp
+            </Button>
+          </div>
+
+          {/* Logo */}
+          <div className="mt-16">
+            <img 
+              src="https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/hc-logo-principal-1751499132949.webp" 
+              alt="HC Assessoria Logo" 
+              className="h-16 mx-auto opacity-80"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Componente App principal
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [headerScrolled, setHeaderScrolled] = useState(false);
+  const [currentPage, setCurrentPage] = useState<"home" | "thank-you">("home");
 
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -649,30 +781,60 @@ export default function App() {
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.3) { // Trigger if 30% visible
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-40% 0px -40% 0px", threshold: [0.3, 0.7] } 
+    if (currentPage === "home") {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.3) { // Trigger if 30% visible
+              setActiveSection(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -40% 0px", threshold: [0.3, 0.7] } 
+      );
+      navLinks.forEach(link => {
+        const element = document.getElementById(link.id);
+        if (element) { sectionRefs.current[link.id] = element; observer.observe(element); }
+      });
+      const handleScroll = () => setHeaderScrolled(window.scrollY > 50);
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        Object.values(sectionRefs.current).forEach(el => { if (el) observer.unobserve(el); });
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [navLinks, currentPage]);
+
+  const handleNavClick = (id: string) => { 
+    if (currentPage === "thank-you") {
+      setCurrentPage("home");
+      setTimeout(() => scrollToSection(id), 100);
+    } else {
+      scrollToSection(id); 
+    }
+    setIsMobileMenuOpen(false); 
+  };
+
+  const handleFormSubmitSuccess = () => {
+    setCurrentPage("thank-you");
+    window.scrollTo(0, 0);
+  };
+
+  const handleBackToHome = () => {
+    setCurrentPage("home");
+    window.scrollTo(0, 0);
+  };
+
+  // Show thank you page
+  if (currentPage === "thank-you") {
+    return (
+      <div className="min-h-screen overflow-x-hidden selection:bg-[var(--color-accent-gold)] selection:text-[var(--color-primary-dark)]">
+        <ThankYouPage onBackToHome={handleBackToHome} />
+      </div>
     );
-    navLinks.forEach(link => {
-      const element = document.getElementById(link.id);
-      if (element) { sectionRefs.current[link.id] = element; observer.observe(element); }
-    });
-    const handleScroll = () => setHeaderScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      Object.values(sectionRefs.current).forEach(el => { if (el) observer.unobserve(el); });
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [navLinks]);
+  }
 
-  const handleNavClick = (id: string) => { scrollToSection(id); setIsMobileMenuOpen(false); };
-
+  // Show main page
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-[var(--color-accent-gold)] selection:text-[var(--color-primary-dark)]">
       {/* Header & Navigation */}
@@ -870,7 +1032,7 @@ export default function App() {
                   </h2>
                   <p className="text-lg text-[var(--color-text-medium)] mt-6">Preencha o formulário e nossa equipe entrará em contato em até 24h para iniciar esta parceria de sucesso.</p>
                 </div>
-                <ContactForm />
+                <ContactForm onSubmitSuccess={handleFormSubmitSuccess} />
               </div>
               
               {/* Image Column */}
