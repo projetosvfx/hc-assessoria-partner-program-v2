@@ -39,37 +39,90 @@ function scrollToSection(id: string) {
 // Hero Background Carousel Component
 function HeroBackgroundCarousel() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
   
-  // Array of background images - you can add more images here
+  // Array of background images with the new uploaded images
   const backgroundImages = [
     "https://frwfcibbvbj5zog7.public.blob.vercel-storage.com/hc-assessoria/imagem-home-1751501708072.webp",
-    // Add your new images here when you upload them
-    // "path/to/your/second-image.jpg",
-    // "path/to/your/third-image.jpg",
+    "/imagem-home-02.jpg", // Business meeting image
+    "/imagem-home-03.jpg", // Professional writing image
   ];
 
   useEffect(() => {
-    if (backgroundImages.length > 1) {
+    // Preload images for smoother transitions
+    const preloadImages = async () => {
+      const imagePromises = backgroundImages.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = src;
+        });
+      });
+      
+      try {
+        await Promise.all(imagePromises);
+        setIsLoaded(true);
+      } catch (error) {
+        console.log("Some images failed to load, but continuing...");
+        setIsLoaded(true);
+      }
+    };
+
+    preloadImages();
+  }, []);
+
+  useEffect(() => {
+    if (backgroundImages.length > 1 && isLoaded) {
       const interval = setInterval(() => {
         setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
-      }, 8000); // Change image every 8 seconds
+      }, 6000); // Change image every 6 seconds for better visibility
       
       return () => clearInterval(interval);
     }
-  }, [backgroundImages.length]);
+  }, [backgroundImages.length, isLoaded]);
+
+  if (!isLoaded) {
+    // Show first image while loading
+    return (
+      <>
+        <div
+          className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-80"
+          style={{ backgroundImage: `url('${backgroundImages[0]}')` }}
+        />
+        <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+      </>
+    );
+  }
 
   return (
     <>
       {backgroundImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center transition-opacity duration-1000 ${
+          className={`absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center transition-opacity duration-2000 ease-in-out ${
             index === currentImage ? 'opacity-80' : 'opacity-0'
           }`}
           style={{ backgroundImage: `url('${image}')` }}
         />
       ))}
       <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+      
+      {/* Optional: Add indicators to show current image */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImage(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImage 
+                ? 'bg-[var(--color-accent-gold)] scale-125' 
+                : 'bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Go to background image ${index + 1}`}
+          />
+        ))}
+      </div>
     </>
   );
 }
