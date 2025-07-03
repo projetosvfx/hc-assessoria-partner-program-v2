@@ -853,8 +853,25 @@ export default function App() {
               </h2>
               <p className="text-lg text-[var(--color-text-medium)] mt-6">Preencha o formulário e nossa equipe entrará em contato em até 24h para iniciar esta parceria de sucesso.</p>
             </div>
-            <div className="max-w-2xl mx-auto glassmorphic p-8 md:p-12">
-              <ContactForm />
+            
+            {/* Two column layout: Form on left, Image on right */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Form Column */}
+              <div className="glassmorphic p-8 md:p-12">
+                <ContactForm />
+              </div>
+              
+              {/* Image Column */}
+              <div className="hidden lg:block">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[var(--color-accent-gold)]/20 to-[var(--color-accent-gold-light)]/20 rounded-3xl blur-xl"></div>
+                  <img 
+                    src="/div.inspect-element-1751567694299.jpeg" 
+                    alt="Parceria de Sucesso" 
+                    className="relative w-full h-auto rounded-2xl shadow-2xl border border-[var(--color-accent-gold)]/30"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
