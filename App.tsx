@@ -843,9 +843,9 @@ export default function App() {
             </div>
           </div>
           
-          {/* Floating icon in bottom left corner */}
+          {/* Floating icon in bottom left corner with white circle */}
           <div className="absolute bottom-8 left-8 z-20">
-            <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+            <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer border border-gray-200">
               <img 
                 src="/hc-icone-detelha.png" 
                 alt="Ícone HC" 
