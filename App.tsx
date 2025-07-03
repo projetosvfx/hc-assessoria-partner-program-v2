@@ -494,38 +494,38 @@ function BenefitsSection() {
   }, [addToRefs]); 
 
   return (
-    <section id="beneficios" className="relative py-20 md:py-32 overflow-hidden">
+    <section id="beneficios" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="absolute top-0 right-0 h-full w-2/3 md:w-1/2 opacity-30 -z-[1]"
         style={{
-          background: `radial-gradient(ellipse at 100% 50%, rgba(200,167,67,0.2) 0%, transparent 60%)`,
+          background: `radial-gradient(ellipse at 100% 50%, rgba(173,147,85,0.2) 0%, transparent 60%)`,
           clipPath: 'ellipse(100% 80% at 100% 50%)',
         }}
       />
       <div className="absolute top-0 left-0 h-1/2 w-1/3 opacity-20 -z-[1]"
         style={{
-          background: `radial-gradient(ellipse at 0% 0%, rgba(28,42,78,0.5) 0%, transparent 70%)`,
+          background: `radial-gradient(ellipse at 0% 0%, rgba(19,36,77,0.5) 0%, transparent 70%)`,
         }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-wider section-title-underline section-title">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 uppercase tracking-wider section-title-underline section-title">
             Benefícios Exclusivos
           </h2>
-           <p className="text-lg text-[var(--color-text-medium)] mt-6">Vantagens que impulsionam seu sucesso e o de seus clientes.</p>
+           <p className="text-lg text-gray-600 mt-6">Vantagens que impulsionam seu sucesso e o de seus clientes.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefitsData.map((benefit, index) => (
             <div
               key={index} ref={addToRefs} data-index={index}
-              className="group flex flex-col p-6 glassmorphic-light space-y-5 hover:border-[var(--color-accent-gold)]/40 transition-all duration-300 ease-in-out"
+              className="group flex flex-col p-6 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg space-y-5 hover:border-[var(--color-accent-gold)]/40 hover:shadow-xl transition-all duration-300 ease-in-out"
               style={{ opacity: 0, transform: 'translateY(40px) scale(0.95)', transitionProperty: 'opacity, transform', transitionDuration: '700ms', transitionTimingFunction: 'cubic-bezier(0.165, 0.84, 0.44, 1)' }}
             >
               <div className="flex-shrink-0 self-start p-3 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-xl shadow-lg border border-black/10">
                 {React.cloneElement(benefit.icon, { size: 32, className: "text-[var(--color-primary-dark)]" })}
               </div>
-              <p className="text-[var(--color-text-light)] text-base md:text-lg leading-relaxed flex-grow">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed flex-grow">
                 {benefit.text}
               </p>
             </div>
@@ -683,7 +683,7 @@ export default function App() {
                 { icon: <BuildingIcon className="h-10 w-10 text-[var(--color-accent-gold)]" />, title: "2. Nós Cuidamos de Tudo", description: "Nossa equipe especializada realiza toda a análise, documentação e processo de recuperação." },
                 { icon: <DollarSignIcon className="h-10 w-10 text-[var(--color-accent-gold)]" />, title: "3. Receba Suas Comissões", description: "Você lucra comissões generosas sobre o valor recuperado, por até 5 anos." },
               ].map((step, index) => (
-                <div key={index} className="glassmorphic p-8 text-center transition-all duration-300 hover:shadow-[0_0_30px_rgba(200,167,67,0.2)] hover:border-[var(--color-accent-gold)]/30 hover:-translate-y-2">
+                <div key={index} className="glassmorphic p-8 text-center transition-all duration-300 hover:shadow-[0_0_30px_rgba(173,147,85,0.2)] hover:border-[var(--color-accent-gold)]/30 hover:-translate-y-2">
                   <div className="flex justify-center mb-6">
                     <div className="p-4 bg-[var(--color-primary-medium-blue)]/50 rounded-full border-2 border-[var(--color-accent-gold)]/30 inline-block shadow-lg">
                       {step.icon}
@@ -749,7 +749,7 @@ export default function App() {
         </section>
 
         <section id="formulario" className="relative py-20 md:py-32 overflow-hidden">
-         <div className="absolute inset-0 -z-10" style={{background: 'radial-gradient(circle at 50% 100%, rgba(28, 42, 78, 0.7) 0%, var(--color-primary-dark) 60%)'}}></div>
+         <div className="absolute inset-0 -z-10" style={{background: 'radial-gradient(circle at 50% 100%, rgba(19, 36, 77, 0.7) 0%, var(--color-primary-dark) 60%)'}}></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white section-title-underline section-title">
