@@ -866,7 +866,7 @@ export default function App() {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-[var(--color-accent-gold)]/20 to-[var(--color-accent-gold-light)]/20 rounded-3xl blur-xl"></div>
                   <img 
-                    src="/div.inspect-element-1751567694299.jpeg" 
+                    src="/imagem-forms.jpg" 
                     alt="Parceria de Sucesso" 
                     className="relative w-full h-auto rounded-2xl shadow-2xl border border-[var(--color-accent-gold)]/30"
                   />
