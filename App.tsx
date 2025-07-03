@@ -847,9 +847,9 @@ export default function App() {
           <div className="absolute bottom-8 left-8 z-20">
             <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <img 
-                src="/imagem-forms.jpg" 
-                alt="Ícone de Suporte" 
-                className="w-10 h-10 rounded-full object-cover"
+                src="/hc-icone-detelha.png" 
+                alt="Ícone HC" 
+                className="w-10 h-10 object-contain"
               />
             </div>
           </div>
