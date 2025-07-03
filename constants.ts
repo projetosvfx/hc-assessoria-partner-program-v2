@@ -1,4 +1,3 @@
-
 import React from 'react';
 // Removed BadgeDollarSignIcon, ClockIcon, ZapIcon, PercentIcon, LayersIcon, BarChartIcon as they were only used in the removed 'advantages' section.
 // TrendingUpIcon and WalletIcon are kept as they are used in benefitsData.
@@ -73,27 +72,27 @@ export const faqData = [
 
 export const benefitsData = [
   {
-    icon: React.createElement(BanknoteIcon, { className: "h-8 w-8 text-[#273462]" }),
+    icon: React.createElement(BanknoteIcon, { className: "h-8 w-8 text-[#13244D]" }),
     text: "Não há nenhum custo na etapa de avaliação",
   },
   {
-    icon: React.createElement(WalletIcon, { className: "h-8 w-8 text-[#273462]" }),
+    icon: React.createElement(WalletIcon, { className: "h-8 w-8 text-[#13244D]" }),
     text: "Eficiência financeira > competitividade.",
   },
   {
-    icon: React.createElement(Shield, { className: "h-8 w-8 text-[#273462]" }), 
+    icon: React.createElement(Shield, { className: "h-8 w-8 text-[#13244D]" }), 
     text: "Estar em conformidade a legislação e preparado para possíveis auditorias.",
   },
   {
-    icon: React.createElement(CoinsIcon, { className: "h-8 w-8 text-[#273462]" }),
+    icon: React.createElement(CoinsIcon, { className: "h-8 w-8 text-[#13244D]" }),
     text: "Alivio no caixa da empresa no mês subsequente a assinatura do contrato, além da economia nos meses seguintes.",
   },
   {
-    icon: React.createElement(TrendingUpIcon, { className: "h-8 w-8 text-[#273462]" }),
+    icon: React.createElement(TrendingUpIcon, { className: "h-8 w-8 text-[#13244D]" }),
     text: "Remuneração na modalidade Success Fee, referente ao valor recuperado de até 5 anos.",
   },
   {
-    icon: React.createElement(CircleDollarSignIcon, { className: "h-8 w-8 text-[#273462]" }),
+    icon: React.createElement(CircleDollarSignIcon, { className: "h-8 w-8 text-[#13244D]" }),
     text: "Potencial de recuperação de tributos de aproximadamente R$3mil por funcionário no período de 5 anos",
   },
 ];

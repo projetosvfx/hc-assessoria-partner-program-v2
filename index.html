@@ -11,10 +11,10 @@
 
     :root {
       --color-primary-dark: #0a0f1e;
-      --color-primary-deep-blue: #1c2a4e;
-      --color-primary-medium-blue: #273462;
-      --color-accent-gold: #c8a743;
-      --color-accent-gold-light: #d4b851;
+      --color-primary-deep-blue: #13244D;
+      --color-primary-medium-blue: #13244D;
+      --color-accent-gold: #AD9355;
+      --color-accent-gold-light: #C4A866;
       --color-text-light: #e0e0e0;
       --color-text-medium: #b0b0b0;
     }
@@ -51,7 +51,7 @@
     }
 
     .cosmic-background {
-      background: linear-gradient(270deg, #0a0f1e, #10163a, #0a0f1e, #1c2a4e);
+      background: linear-gradient(270deg, #0a0f1e, #10163a, #0a0f1e, #13244D);
       background-size: 400% 400%;
       animation: cosmicShift 25s ease infinite;
     }
@@ -101,30 +101,30 @@
     }
 
     .slider:focus {
-      box-shadow: 0 0 0 3px rgba(200, 167, 67, 0.2); /* Keep focus indicator subtle */
+      box-shadow: 0 0 0 3px rgba(173, 147, 85, 0.2); /* Updated to new gold color */
     }
     
     .cosmic-glow-text {
-      /* text-shadow: 0 0 8px rgba(200, 167, 67, 0.7), 
-                   0 0 12px rgba(200, 167, 67, 0.5),
-                   0 0 18px rgba(200, 167, 67, 0.3); */
+      /* text-shadow: 0 0 8px rgba(173, 147, 85, 0.7), 
+                   0 0 12px rgba(173, 147, 85, 0.5),
+                   0 0 18px rgba(173, 147, 85, 0.3); */
       /* Glow removed for sophistication */
     }
 
     .glassmorphic {
-      background: rgba(28, 42, 78, 0.6); /* var(--color-primary-deep-blue) with alpha */
+      background: rgba(19, 36, 77, 0.6); /* Updated to new blue color with alpha */
       backdrop-filter: blur(12px) saturate(150%);
       -webkit-backdrop-filter: blur(12px) saturate(150%);
-      border: 1px solid rgba(200, 167, 67, 0.15); /* var(--color-accent-gold) with alpha */
+      border: 1px solid rgba(173, 147, 85, 0.15); /* Updated to new gold color with alpha */
       border-radius: 1.5rem; /* Equivalent to Tailwind's rounded-3xl */
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     }
     
     .glassmorphic-light {
-      background: rgba(40, 52, 98, 0.5); /* Lighter blue for depth */
+      background: rgba(19, 36, 77, 0.5); /* Updated to new blue color */
       backdrop-filter: blur(10px) saturate(140%);
       -webkit-backdrop-filter: blur(10px) saturate(140%);
-      border: 1px solid rgba(200, 167, 67, 0.1);
+      border: 1px solid rgba(173, 147, 85, 0.1); /* Updated to new gold color */
       border-radius: 1rem; /* Tailwind's rounded-xl or 2xl */
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
     }
@@ -165,12 +165,12 @@
     }
     
     .button-glow-gold {
-       /* box-shadow: 0 0 15px rgba(200,167,67,0.4), 0 0 25px rgba(200,167,67,0.2), inset 0 0 5px rgba(255,255,255,0.2); */
+       /* box-shadow: 0 0 15px rgba(173,147,85,0.4), 0 0 25px rgba(173,147,85,0.2), inset 0 0 5px rgba(255,255,255,0.2); */
        /* Glow removed for sophistication */
        /* A subtle standard shadow can be added if elevation is desired, e.g., box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
     }
     .button-glow-gold:hover {
-       /* box-shadow: 0 0 20px rgba(200,167,67,0.6), 0 0 35px rgba(200,167,67,0.4), inset 0 0 8px rgba(255,255,255,0.3); */
+       /* box-shadow: 0 0 20px rgba(173,147,85,0.6), 0 0 35px rgba(173,147,85,0.4), inset 0 0 8px rgba(255,255,255,0.3); */
        /* Glow removed for sophistication */
        /* e.g., box-shadow: 0 4px 8px rgba(0,0,0,0.15); */
     }
