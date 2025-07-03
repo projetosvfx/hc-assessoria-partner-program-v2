@@ -796,9 +796,13 @@ export default function App() {
 
         <BenefitsSection />
 
-        <section id="calculadora" className="py-20 md:py-32 bg-[var(--color-primary-dark)]/70 relative overflow-hidden">
-           <div className="absolute inset-0 opacity-5 -z-10" style={{backgroundImage: `radial-gradient(var(--color-accent-gold) 0.5px, transparent 0.5px), radial-gradient(var(--color-accent-gold) 0.5px, var(--color-primary-dark) 0.5px)`, backgroundSize: `20px 20px, 20px 20px`, backgroundPosition: `0 0, 10px 10px`}}></div>
-          <div className="container mx-auto px-4">
+        <section id="calculadora" className="py-20 md:py-32 relative overflow-hidden">
+          {/* Background image with overlay */}
+          <div className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center opacity-60" 
+               style={{backgroundImage: "url('/section.inspect-element-1751565304143.jpeg')"}}></div>
+          <div className="absolute inset-0 -z-10" style={{background: 'rgba(10, 15, 30, 0.9)'}}></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <EarningsSimulator />
           </div>
         </section>
