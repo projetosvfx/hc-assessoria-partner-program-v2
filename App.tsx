@@ -410,7 +410,7 @@ function EarningsSimulator() {
               onClick={() => scrollToSection("formulario")}
               className="mt-6 bg-gradient-to-r from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] hover:opacity-90 text-[var(--color-primary-dark)] font-bold border-0 rounded-xl py-4 text-lg shadow-lg w-full"
             >
-              🎯 QUERO LUCRAR AGORA!
+              QUERO LUCRAR AGORA!
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
         </div>
