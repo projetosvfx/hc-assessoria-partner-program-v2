@@ -10,13 +10,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
     :root {
-      --color-primary-dark: #0a0f1e;
+      --color-primary-dark: #E8E8E8;
       --color-primary-deep-blue: #13244D;
       --color-primary-medium-blue: #13244D;
       --color-accent-gold: #AD9355;
       --color-accent-gold-light: #C4A866;
-      --color-text-light: #e0e0e0;
-      --color-text-medium: #b0b0b0;
+      --color-text-light: #333333;
+      --color-text-medium: #666666;
     }
 
     body {
@@ -51,9 +51,7 @@
     }
 
     .cosmic-background {
-      background: linear-gradient(270deg, #0a0f1e, #10163a, #0a0f1e, #13244D);
-      background-size: 400% 400%;
-      animation: cosmicShift 25s ease infinite;
+      background: #E8E8E8;
     }
 
     .slider {
@@ -112,34 +110,34 @@
     }
 
     .glassmorphic {
-      background: rgba(19, 36, 77, 0.6); /* Updated to new blue color with alpha */
+      background: rgba(19, 36, 77, 0.9); /* Updated to new blue color with higher opacity for light background */
       backdrop-filter: blur(12px) saturate(150%);
       -webkit-backdrop-filter: blur(12px) saturate(150%);
-      border: 1px solid rgba(173, 147, 85, 0.15); /* Updated to new gold color with alpha */
+      border: 1px solid rgba(173, 147, 85, 0.3); /* Updated to new gold color with alpha */
       border-radius: 1.5rem; /* Equivalent to Tailwind's rounded-3xl */
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
     }
     
     .glassmorphic-light {
-      background: rgba(19, 36, 77, 0.5); /* Updated to new blue color */
+      background: rgba(19, 36, 77, 0.8); /* Updated to new blue color with higher opacity */
       backdrop-filter: blur(10px) saturate(140%);
       -webkit-backdrop-filter: blur(10px) saturate(140%);
-      border: 1px solid rgba(173, 147, 85, 0.1); /* Updated to new gold color */
+      border: 1px solid rgba(173, 147, 85, 0.2); /* Updated to new gold color */
       border-radius: 1rem; /* Tailwind's rounded-xl or 2xl */
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     }
 
-    /* Custom scrollbar for better aesthetics with the dark theme */
+    /* Custom scrollbar for better aesthetics with the light theme */
     ::-webkit-scrollbar {
       width: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--color-primary-dark); 
+      background: #E8E8E8; 
     }
     ::-webkit-scrollbar-thumb {
       background: var(--color-accent-gold);
       border-radius: 5px;
-      border: 2px solid var(--color-primary-dark);
+      border: 2px solid #E8E8E8;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: var(--color-accent-gold-light);
