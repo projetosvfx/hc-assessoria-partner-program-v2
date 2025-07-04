@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HC Assessoria Partner Program - Cosmic Flow</title>
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <!-- Meta tags for better SEO and social sharing -->
+  <meta name="description" content="Torne-se parceiro da HC Assessoria e ganhe até R$ 150.000 por indicação. Programa de parceiros com as melhores comissões do mercado.">
+  <meta name="keywords" content="HC Assessoria, parceiro, indicação, comissão, recuperação tributária">
+  <meta name="author" content="HC Assessoria">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="HC Assessoria - Programa de Parceiros">
+  <meta property="og:description" content="Ganhe até R$ 150.000 por indicação. Torne-se parceiro da HC Assessoria.">
+  <meta property="og:image" content="/favicon.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="HC Assessoria - Programa de Parceiros">
+  <meta property="twitter:description" content="Ganhe até R$ 150.000 por indicação. Torne-se parceiro da HC Assessoria.">
+  <meta property="twitter:image" content="/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+    /* Add Bricolage Grotesque font from Google Fonts */
+    :root {
+      --color-primary-dark: #0a0f1e;
+      --color-primary-deep-blue: #13244D;
+      --color-primary-medium-blue: #13244D;
+      --color-accent-gold: #AD9355;
+      --color-accent-gold-light: #C4A76B;
+      --color-text-light: #e0e0e0;
+      --color-text-medium: #b0b0b0;
+    }
+    body {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      background-color: var(--color-primary-dark);
+      color: var(--color-text-light);
+      overflow-x: hidden; /* Prevent horizontal scrollbars from rogue elements */
+    }
+    /* Apply Bricolage Grotesque specifically to titles and headings with higher specificity */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+      font-weight: 700 !important;
+    }
+    /* Specific targeting for main hero title */
+    .hero-title {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+      font-weight: 800 !important;
+    }
+    /* Section titles */
+    .section-title {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+      font-weight: 700 !important;
+    }
+    @keyframes cosmicShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cosmic-background {
+      background: linear-gradient(270deg, #0a0f1e, #10163a, #0a0f1e, #13244D);
+      background-size: 400% 400%;
+      animation: cosmicShift 25s ease infinite;
+    }
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 12px; /* Slimmer slider track */
+      border-radius: 6px;
+      outline: none;
+      transition: all 0.3s ease;
+      background-color: var(--color-primary-medium-blue); /* Base track color */
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 22px; /* Slightly smaller thumb */
+      width: 22px;
+      border-radius: 50%;
+      background: var(--color-accent-gold);
+      cursor: pointer;
+      border: 3px solid var(--color-primary-dark);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+      transition: all 0.3s ease;
+    }
+    .slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Slightly more on hover */
+    }
+    .slider::-moz-range-thumb {
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: var(--color-accent-gold);
+      cursor: pointer;
+      border: 3px solid var(--color-primary-dark);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+      transition: all 0.3s ease;
+    }
+    .slider::-moz-range-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Slightly more on hover */
+    }
+    .slider:focus {
+      box-shadow: 0 0 0 3px rgba(173, 147, 85, 0.2); /* Updated to new gold color */
+    }
+    .cosmic-glow-text {
+      /* text-shadow: 0 0 8px rgba(173, 147, 85, 0.7), 
+                   0 0 12px rgba(173, 147, 85, 0.5),
+                   0 0 18px rgba(173, 147, 85, 0.3); */
+      /* Glow removed for sophistication */
+    }
+    .glassmorphic {
+      background: rgba(19, 36, 77, 0.6); /* Updated to new blue with alpha */
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border: 1px solid rgba(173, 147, 85, 0.15); /* Updated to new gold with alpha */
+      border-radius: 1.5rem; /* Equivalent to Tailwind's rounded-3xl */
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    }
+    .glassmorphic-light {
+      background: rgba(19, 36, 77, 0.5); /* Updated to new blue */
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+      border: 1px solid rgba(173, 147, 85, 0.1); /* Updated to new gold */
+      border-radius: 1rem; /* Tailwind's rounded-xl or 2xl */
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    }
+    /* Custom scrollbar for better aesthetics with the dark theme */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-primary-dark); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-accent-gold);
+      border-radius: 5px;
+      border: 2px solid var(--color-primary-dark);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-accent-gold-light);
+      /* box-shadow: 0 0 5px var(--color-accent-gold-light); Removed glow */
+    }
+    .section-title-underline {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem; /* Space for the underline */
+    }
+    .section-title-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px; /* Adjust width as needed */
+      height: 3px;
+      background-color: var(--color-accent-gold);
+      border-radius: 2px;
+      /* box-shadow: 0 0 8px var(--color-accent-gold); Removed glow */
+    }
+    .button-glow-gold {
+       /* box-shadow: 0 0 15px rgba(173,147,85,0.4), 0 0 25px rgba(173,147,85,0.2), inset 0 0 5px rgba(255,255,255,0.2); */
+       /* Glow removed for sophistication */
+       /* A subtle standard shadow can be added if elevation is desired, e.g., box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    }
+    .button-glow-gold:hover {
+       /* box-shadow: 0 0 20px rgba(173,147,85,0.6), 0 0 35px rgba(173,147,85,0.4), inset 0 0 8px rgba(255,255,255,0.3); */
+       /* Glow removed for sophistication */
+       /* e.g., box-shadow: 0 4px 8px rgba(0,0,0,0.15); */
+    }
+
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@/App": "./App.tsx"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-D7OKyE0H.js"></script>
+</head>
+<body class="cosmic-background">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+</html>
