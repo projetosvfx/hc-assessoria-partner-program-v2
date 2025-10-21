@@ -127,6 +127,15 @@ function HeroBackgroundCarousel() {
   );
 }
 
+// Função para obter iniciais do nome
+function getInitials(name: string): string {
+  return name
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase())
+    .slice(0, 2)
+    .join('');
+}
+
 // Componente TestimonialCarousel (adaptado)
 function TestimonialCarousel() {
   const [current, setCurrent] = useState(0);
@@ -189,18 +198,10 @@ function TestimonialCarousel() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="relative flex-shrink-0">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-gold-light)] rounded-full blur-sm opacity-70"></div>
-                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-[var(--color-primary-medium-blue)] flex items-center justify-center overflow-hidden border-2 border-[var(--color-accent-gold)]/50">
-                  {testimonials[current].image ? (
-                    <img
-                      src={testimonials[current].image || `https://picsum.photos/seed/placeholderUser/128/128`}
-                      alt={testimonials[current].name}
-                      width={128}
-                      height={128}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <UserIcon className="h-12 w-12 md:h-16 md:w-16 text-[var(--color-text-light)]" />
-                  )}
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-[var(--color-primary-medium-blue)] to-[var(--color-primary-deep-blue)] flex items-center justify-center border-2 border-[var(--color-accent-gold)]/50">
+                  <span className="text-3xl md:text-4xl font-bold text-[var(--color-accent-gold)]">
+                    {getInitials(testimonials[current].name)}
+                  </span>
                 </div>
               </div>
               <div className="text-center md:text-left">
