@@ -207,19 +207,31 @@
        /* e.g., box-shadow: 0 4px 8px rgba(0,0,0,0.15); */
     }
 
-    /* Fix input text color for better visibility */
+    /* Fix input and textarea text color for better visibility */
+    input,
+    textarea,
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    textarea {
-      color: #374151 !important; /* Gray-700 for good contrast */
+    select {
+      color: #1f2937 !important; /* Dark gray for excellent contrast */
+      background-color: #ffffff !important; /* Ensure white background */
     }
     
+    input::placeholder,
+    textarea::placeholder,
     input[type="text"]::placeholder,
     input[type="email"]::placeholder,
-    input[type="tel"]::placeholder,
-    textarea::placeholder {
-      color: #9CA3AF !important; /* Gray-400 for placeholder */
+    input[type="tel"]::placeholder {
+      color: #6b7280 !important; /* Medium gray for placeholder */
+      opacity: 1 !important; /* Ensure placeholder is visible */
+    }
+    
+    /* Focus state for inputs */
+    input:focus,
+    textarea:focus {
+      color: #1f2937 !important;
+      background-color: #ffffff !important;
     }
   </style>
 <script type="importmap">
