@@ -13,28 +13,28 @@ export const testimonials = [
   {
     name: "João Pereira",
     role: "Contador Parceiro",
-    image: "https://picsum.photos/seed/avatar1/128/128",
+    image: "JP",
     content:
       "Indiquei APENAS UMA empresa e já recebi R$ 12.000 em 45 dias. Zero esforço da minha parte. A HC fez absolutamente tudo e minha conta bancária agradeceu.",
   },
   {
     name: "Maria Silva",
     role: "Consultora Tributária",
-    image: "https://picsum.photos/seed/avatar2/128/128",
+    image: "MS",
     content:
       "Minha renda EXPLODIU para mais de R$ 30.000 mensais com apenas 5 indicações. Enquanto eu durmo, o dinheiro continua entrando. É literalmente a definição de renda passiva.",
   },
   {
     name: "Carlos Mendes",
     role: "Empresário",
-    image: "https://picsum.photos/seed/avatar3/128/128",
+    image: "CM",
     content:
       "Minha maior comissão foi de R$ 45.000 em um ÚNICO MÊS. Simplesmente apresentei a HC para 3 conhecidos e o dinheiro começou a fluir. É a parceria mais lucrativa que já fiz.",
   },
   {
     name: "Ana Oliveira",
     role: "Advogada Tributarista",
-    image: "https://picsum.photos/seed/avatar4/128/128",
+    image: "AO",
     content:
       "Ganho R$ 25.000 EXTRAS todo mês sem precisar trabalhar mais. Meus clientes ficam felizes, eu fico rica, e a HC faz todo o trabalho pesado. É praticamente dinheiro de graça.",
   },
